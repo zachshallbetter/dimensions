@@ -1,0 +1,36 @@
+{
+    "eye": {
+      "radius": 0.333,
+      "verticalPosition": 0.45,
+      "focalPoint": { "x": 50, "y": 50, "z": 0 },
+      "positions": {
+        "left": { "x": -0.75, "y": 0.45, "z": 0.235 },
+        "right": { "x": 0.62, "y": 0.45, "z": 0.235 }
+      },
+      "iris": {
+        "radius": 0.11,
+        "texture": "./assets/iris_image.png"
+      },
+      "pupil": {
+        "radius": 0.01,
+        "texture": "./assets/pupil_image.png"
+      },
+      "rotation": {
+        "maxHorizontal": 0.5235987755982988,
+        "maxVerticalDown": 0.5235987755982988
+      },
+      "position": { "x": 0, "y": 0, "z": 1 }
+    },
+    "head": {
+      "rotation": {
+        "maxHorizontal": 0.5235987755982988,
+        "maxVerticalDown": 0.5235987755982988
+      }
+    },
+    "geometry": {
+      "colorTexture": "./assets/image.png",
+      "displacementTexture": "./assets/displacement_sockets.png",
+      "normalTexture": "./assets/normal.png"
+    }
+  }
+  
