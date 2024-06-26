@@ -26,8 +26,85 @@ body {
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; 
 }
 
-code {
-  font-family: var(--font-family-mono);
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+canvas { display: block; }
+
+#controlPanel {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  margin: 25px;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border: 2px solid rgb(255, 255, 255, 0.75);
+}
+
+.controls label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.controls h1, .controls h2 {
+  font-size: 16px;
+
+
+  font-weight: normal;
+  color: #aad;
+}
+
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  background: #444; /* Darker elements for file inputs */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+input[type="range"], input[type="file"] {
+  background: #555; /* Slider and file input background */
+  border: none;
+  color: #fff;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #bbb;
+  border-radius: 50%;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+#controlPanel input[type="color"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#controlOrbs {
+  position: fixed;
+  left: 10px;
+  top: 50%; 
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
