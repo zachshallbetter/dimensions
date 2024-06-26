@@ -1,28 +1,15 @@
 {
   "name": "focus-head",
   "version": "0.1.0",
-  "dependencies": {
-    "@types/three": "^0.165.0",
-    "http-server": "^14.1.1",
-    "three": "^0.165.0"
-  },
-  "main": "index.js",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "start": "http-server -p 8080 -c-1 --watch",
-    "build": "webpack --mode production",
-    "dev": "webpack serve --mode development"
+    "build": "echo 'No build step required'",
+    "start": "http-server -p $PORT"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
