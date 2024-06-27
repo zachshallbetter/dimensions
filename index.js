@@ -365,17 +365,18 @@ function createPlane(textures) {
     scene.add(plane);
 }
 
-function createEyes() {
+function createEyes(textures) {
     const textureLoader = new THREE.TextureLoader();
     const irisTexture = textureLoader.load(config.eye.iris.texture);
     const scalaraTexture = textureLoader.load(config.geometry.scalaraTexture);
     const createEyeSphere = () => {
         const eyeGeometry = new THREE.SphereGeometry(config.eye.radius, 32, 32);
-        const eyeMaterial = new THREE.MeshStandardMaterial({ 
+        const eyeMaterial = new THREE.MeshPhongMaterial({
             map: scalaraTexture,
-            metalness: 0,
-            roughness: 0.8,
-            emissive: 0x000000
+            transparent: true,
+            opacity: 0.85,
+            depthWrite: false,  // Consider setting this to true if visual issues persist
+            side: THREE.DoubleSide  // Ensure the material is visible from all angles if the geometry requires it
         });
         const eye = new THREE.Mesh(eyeGeometry, eyeMaterial);
         eye.castShadow = true;
