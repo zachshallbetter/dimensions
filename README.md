@@ -28,4 +28,4 @@ Experimental demo. It needs a browser with WebGL and network access to the CDN. 
 
 ## License
 
-No license is declared yet.
+MIT. See [LICENSE](LICENSE).
